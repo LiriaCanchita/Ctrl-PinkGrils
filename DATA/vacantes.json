@@ -1,0 +1,43 @@
+[{
+    "id":1,
+    "Titulo":"Titulo 1",
+    "Area":"area 1",
+    "Habilidades":["hablidad 1","habilidad 2","habilidad 3","habilidad 4"],
+    "Faces":["Entrevista","Prueba", "Entrevista final"],
+    "Dias":["3 dias","7 dias", "1 dia"],
+    "Documentos":["CV","DNI","Cervificados"]
+},{
+    "id":2,
+    "Titulo":"Titulo 2",
+    "Area":"area 2",
+    "Habilidades":["hablidad 1","habilidad 2","habilidad 3","habilidad 4"],
+    "Faces":["Entrevista","Prueba", "Entrevista final"],
+    "Dias":["3 dias","7 dias", "1 dia"],
+    "Documentos":["CV","DNI","Cervificados"]
+},{
+    "id":3,
+    "Titulo":"Titulo 3",
+    "Area":"area 3",
+    "Habilidades":["hablidad 1","habilidad 2","habilidad 3","habilidad 4"],
+    "Faces":["Entrevista","Prueba", "Entrevista final"],
+    "Dias":["3 dias","7 dias", "1 dia"],
+    "Documentos":["CV","DNI","Cervificados"]
+},{
+    "id":4,
+    "Titulo":"Titulo 4",
+    "Area":"area 4",
+    "Habilidades":["hablidad 1","habilidad 2","habilidad 3","habilidad 4"],
+    "Faces":["Entrevista","Prueba", "Entrevista final"],
+    "Dias":["3 dias","7 dias", "1 dia"],
+    "Documentos":["CV","DNI","Cervificados"]
+},{
+    "id":5,
+    "Titulo":"Titulo 5",
+    "Area":"area 5",
+    "Habilidades":["hablidad 1","habilidad 2","habilidad 3","habilidad 4"],
+    "Faces":["Entrevista","Prueba", "Entrevista final"],
+    "Dias":["3 dias","7 dias", "1 dia"],
+    "Documentos":["CV","DNI","Cervificados"]
+}
+
+]
