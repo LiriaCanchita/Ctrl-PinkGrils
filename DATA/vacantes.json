@@ -1,43 +1,41 @@
 [{
     "id":1,
-    "Titulo":"Titulo 1",
-    "Area":"area 1",
-    "Habilidades":["hablidad 1","habilidad 2","habilidad 3","habilidad 4"],
+    "titulo":"Analista de Tecnología",
+    "area":"Tecnología",
+    "habilidades":["JavaScript", "SQL", "Excel", "Python"],
     "Faces":["Entrevista","Prueba", "Entrevista final"],
     "Dias":["3 dias","7 dias", "1 dia"],
-    "Documentos":["CV","DNI","Cervificados"]
+    "Documentos":["CV","DNI","Certificados"]
 },{
     "id":2,
-    "Titulo":"Titulo 2",
-    "Area":"area 2",
-    "Habilidades":["hablidad 1","habilidad 2","habilidad 3","habilidad 4"],
-    "Faces":["Entrevista","Prueba", "Entrevista final"],
-    "Dias":["3 dias","7 dias", "1 dia"],
-    "Documentos":["CV","DNI","Cervificados"]
+    "titulo":"Ejecutivo de Ventas",
+    "area":"Comercial",
+    "habilidades":["Ventas", "Negociación", "Comunicación", "Atención al cliente"],
+    "Faces":["Entrevista","Dinámica grupal", "Entrevista final"],
+    "Dias":["3 dias","4 dias", "1 dia"],
+    "Documentos":["CV","DNI","Referencias"]
 },{
     "id":3,
-    "Titulo":"Titulo 3",
-    "Area":"area 3",
-    "Habilidades":["hablidad 1","habilidad 2","habilidad 3","habilidad 4"],
-    "Faces":["Entrevista","Prueba", "Entrevista final"],
-    "Dias":["3 dias","7 dias", "1 dia"],
-    "Documentos":["CV","DNI","Cervificados"]
+    "titulo":"Analista de Marketing Digital",
+    "area":"Marketing",
+    "habilidades":["Redes sociales", "Canva", "Marketing digital", "Comunicación"],
+    "Faces":["Entrevista","Portafolio", "Entrevista final"],
+    "Dias":["3 dias","5 dias", "2 dias"],
+    "Documentos":["CV","DNI","Portafolio"]
 },{
     "id":4,
-    "Titulo":"Titulo 4",
-    "Area":"area 4",
-    "Habilidades":["hablidad 1","habilidad 2","habilidad 3","habilidad 4"],
-    "Faces":["Entrevista","Prueba", "Entrevista final"],
+    "titulo":"Analista de Riesgos",
+    "area":"Finanzas",
+    "habilidades":["SQL", "Excel", "Análisis de datos", "Gestión de riesgos"],
+    "Faces":["Entrevista","Prueba técnica", "Entrevista final"],
     "Dias":["3 dias","7 dias", "1 dia"],
-    "Documentos":["CV","DNI","Cervificados"]
+    "Documentos":["CV","DNI","Certificados"]
 },{
     "id":5,
-    "Titulo":"Titulo 5",
-    "Area":"area 5",
-    "Habilidades":["hablidad 1","habilidad 2","habilidad 3","habilidad 4"],
-    "Faces":["Entrevista","Prueba", "Entrevista final"],
-    "Dias":["3 dias","7 dias", "1 dia"],
-    "Documentos":["CV","DNI","Cervificados"]
-}
-
-]
+    "titulo":"Especialista de Atención al Cliente",
+    "area":"Servicio al Cliente",
+    "habilidades":["Comunicación", "Empatía", "Atención al cliente", "Resolución de problemas"],
+    "Faces":["Entrevista","Roleplay", "Entrevista final"],
+    "Dias":["3 dias","4 dias", "1 dia"],
+    "Documentos":["CV","DNI"]
+}]

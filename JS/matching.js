@@ -5,8 +5,8 @@ async function cargarVacantes() {
 }
 
 function matchVacante(usruario, vacante){
-    const habilidadesUsuario = usruario.Habilidades;
-    const habilidadesVacantes = vacante.Habilidades;
+    const habilidadesUsuario = usruario.habilidades;
+    const habilidadesVacantes = vacante.habilidades;
     const matchean = habilidadesUsuario.filter(h => habilidadesVacantes.includes(h));
 
     return Math.round((matchean.length/habilidadesVacantes.length)*100);

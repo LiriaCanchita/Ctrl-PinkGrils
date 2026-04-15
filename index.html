@@ -1,19 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tu Camino en Diners</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="CSS/styles.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tu Camino en Diners</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@300;400;500;700&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="CSS/styles.css">
+  <link rel="stylesheet" href="CSS/index.css">
 
 </head>
-<body>
-    
 
-    <script src="JS/matching.js"></script>
-    <script src="JS/vacante.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand" href="index.html">
+        <img src="Imagenes/diners.png" alt="Diners Club">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Política</a></li>
+          <li class="nav-item"><a class="nav-link" href="vacantes.html">Explorador</a></li>
+          <li class="nav-item"><a class="nav-link" href="resgistro.html">Registro</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Objetivos</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="explorador">
+      <div class="container">
+        <div class="hero__top">
+          <h1 class="hero__title">Un espacio para crecer, aprender y avanzar</h1>
+        </div>
+
+        <!-- CARRUSEL -->
+        <div class="carousel" aria-label="Carrusel de mensajes inspiradores">
+          
+
+          <div class="carousel__viewport">
+            <div class="carousel__track">
+
+              <!-- Slide 1 -->
+              <article class="carousel__slide active">
+                <div class="carousel__content">
+                  <div class="carousel__image">
+                    <img src="Imagenes/carrusel1-1.jpg" alt="Equipo de trabajo reunido en oficina" />
+                  </div>
+                  <div class="carousel__text">
+                    <h2>No buscamos empleados, buscamos personas que quieran crecer con nosotros.</h2>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Slide 2 -->
+              <article class="carousel__slide">
+                <div class="carousel__content">
+                  <div class="carousel__image">
+                    <img src="Imagenes/carrusel1-2.jpg" alt="Personas uniendo sus manos en trabajo en equipo" />
+                  </div>
+                  <div class="carousel__text">
+                    <h2>El éxito no se busca, se construye… y aquí lo hacemos juntos.</h2>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Slide 3 -->
+              <article class="carousel__slide">
+                <div class="carousel__content">
+                  <div class="carousel__image">
+                    <img src="Imagenes/carrusel1-3.jpg" alt="Dos profesionales revisando información en una tablet" />
+                  </div>
+                  <div class="carousel__text">
+                    <h2>El talento abre puertas, pero la actitud las mantiene abiertas.</h2>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+         
+
+          <div class="carousel__indicators" aria-label="Indicadores del carrusel">
+            <button class="carousel__dot active" type="button" aria-label="Ir al slide 1"></button>
+            <button class="carousel__dot" type="button" aria-label="Ir al slide 2"></button>
+            <button class="carousel__dot" type="button" aria-label="Ir al slide 3"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CÓMO FUNCIONA -->
+    <section class="steps" id="registro">
+      <div class="container">
+        <h2 class="section-title">¿Cómo funciona?</h2>
+        <p class="section-subtitle">Son 3 simples pasos</p>
+
+        <div class="steps__grid">
+          <article class="step-card">
+            <div class="step-card__icon">
+              <img src="Imagenes/paso1.png" alt="Icono de usuario" />
+            </div>
+            <p class="step-card__text">Cuéntanos quién eres</p>
+          </article>
+
+          <article class="step-card">
+            <div class="step-card__icon">
+              <img src="Imagenes/paso2.png" alt="Icono de búsqueda" />
+            </div>
+            <p class="step-card__text">Descubre tus oportunidades</p>
+          </article>
+
+          <article class="step-card">
+            <div class="step-card__icon">
+              <img src="Imagenes/paso3.png" alt="Icono de cohete" />
+            </div>
+            <p class="step-card__text">Inicia tu camino en Diners</p>
+          </article>
+        </div>
+
+        <div class="steps__cta">
+          <a href="ingresoPerfil.html" class="btn btn--primary">Empezar</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- POR QUÉ DINERS -->
+    <section class="benefits" id="objetivos">
+      <div class="container">
+        <h2 class="section-title">¿Por qué Diners?</h2>
+
+        <div class="benefits__grid">
+
+          <article class="benefit-card">
+            <img src="Imagenes/PQ1.png" alt="Personas trabajando con tecnología" class="benefit-card__image" />
+            <div class="benefit-card__overlay">
+              <h3>Innovación constante</h3>
+              <p>Apostamos por la tecnología y las nuevas ideas.</p>
+            </div>
+          </article>
+
+          <article class="benefit-card">
+            <img src="Imagenes/PQ2.png" alt="Profesional observando una ciudad" class="benefit-card__image" />
+            <div class="benefit-card__overlay">
+              <h3>Crece con nosotros</h3>
+              <p>Impulsamos el desarrollo profesional de cada persona.</p>
+            </div>
+          </article>
+
+          <article class="benefit-card">
+            <img src="Imagenes/PQ3.png" alt="Equipo colaborando en oficina" class="benefit-card__image" />
+            <div class="benefit-card__overlay">
+              <h3>Un equipo que te respalda</h3>
+              <p>Somos un equipo diverso, colaborativo y humano.</p>
+            </div>
+          </article>
+
+          <article class="benefit-card">
+            <img src="Imagenes/PQ4.png" alt="Familia compartiendo un momento juntos" class="benefit-card__image" />
+            <div class="benefit-card__overlay">
+              <h3>Beneficios que diferencian</h3>
+              <p>Ofrecemos beneficios pensados para tu bienestar y el de tu familia.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="final-cta">
+      <div class="container final-cta__container">
+        <h2 class="final-cta__title">¿Listo para descubrir tu camino?</h2>
+
+        <a href="ingresoPerfil.html" class="btn btn--primary">Empezar</a>
+
+        <p class="final-cta__text">
+          Miles de personas ya forman parte de nuestra familia.
+          Cuéntanos quién eres y te mostraremos las oportunidades que te esperan.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__container">
+
+      <div class="footer__brand">
+        <img src="img/logo-diners-blanco.png" alt="Logo Diners Club en blanco" class="footer__logo" />
+      </div>
+
+      <div class="footer__columns">
+        <div class="footer__column">
+          <h3>Nosotros</h3>
+          <ul>
+            <li><a href="#">Quiénes somos</a></li>
+            <li><a href="#">Nuestra cultura</a></li>
+            <li><a href="#">Trabaja con nosotros</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__column">
+          <h3>Lugares</h3>
+          <ul>
+            <li><a href="#">Lima</a></li>
+            <li><a href="#">Arequipa</a></li>
+            <li><a href="#">Modalidad remota</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__column">
+          <h3>Canales digitales</h3>
+          <ul>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__column">
+          <h3>Redes sociales</h3>
+          <div class="footer__social">
+            <a href="#" aria-label="Facebook">
+              <img src="img/icono-facebook.png" alt="Facebook" />
+            </a>
+            <a href="#" aria-label="Instagram">
+              <img src="img/icono-instagram.png" alt="Instagram" />
+            </a>
+            <a href="#" aria-label="LinkedIn">
+              <img src="img/icono-linkedin.png" alt="LinkedIn" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>Copyright © 2026 Diners Club Perú. Todos los derechos reservados.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="JS/matching.js"></script>
+  <script src="JS/vacante.js"></script>
+  <script src="JS/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
