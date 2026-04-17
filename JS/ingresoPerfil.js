@@ -4,7 +4,7 @@ const paginas = [
         imagen: "Imagenes/Imagen1.jpg",
         partes: `
             <label>Nombre completo</label>
-            <input type="text" class="form-control" required>
+            <input type="text" id="nombre" class="form-control" required>
 
             <label>Email</label>
             <input type="email" class="form-control" required>
@@ -153,11 +153,12 @@ function siguiente() {
 }
 
 boton.addEventListener("click", () => {
+    guardarPaso(); // ← AÑADE ESTO — guarda datos y redirige si es el último paso
+
     if (actual < paginas.length - 1) {
         actual++;
         siguiente();
-    } 
-
+    }
 });
 
 siguiente();

@@ -30,3 +30,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     updateCarousel();
 });
+
+document.addEventListener("keydown", function (e) {
+    // Ctrl + Shift + A
+    if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "a") {
+
+        const password = prompt("Ingrese contraseña de administrador:");
+
+        if (password === "contraseña123") {
+            window.location.href = "admin.html";
+        } else if (password !== null) {
+            alert("Contraseña incorrecta");
+        }
+    }
+});

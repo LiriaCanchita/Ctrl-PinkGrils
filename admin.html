@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel Admin</title>
+    <link rel="stylesheet" href="CSS/admin.css">
+</head>
+<body>
+
+<div class="admin-container">
+
+    <h2>Crear nueva vacante</h2>
+
+    <div class="admin-form">
+
+        <div>
+            <label>Título</label>
+            <input id="titulo">
+        </div>
+
+        <div>
+            <label>Área</label>
+            <input id="area">
+        </div>
+
+        <div>
+            <label>Experiencia</label>
+            <input id="experiencia">
+        </div>
+
+        <div>
+            <label>Imagen</label>
+            <input id="imagen">
+        </div>
+
+        <div class="full">
+            <label>Descripción corta</label>
+            <textarea id="descripcion"></textarea>
+        </div>
+
+        <div class="full">
+            <label>Descripción larga</label>
+            <textarea id="descripcionLarga"></textarea>
+        </div>
+
+        <div class="full">
+            <label>Habilidades</label>
+            <input id="habilidades">
+            <div class="admin-hint">Separar con comas</div>
+        </div>
+
+        <div class="full">
+            <label>Requisitos obligatorios</label>
+            <input id="reqObli">
+        </div>
+
+        <div class="full">
+            <label>Requisitos deseables</label>
+            <input id="reqDese">
+        </div>
+
+        <div>
+            <label>Fases</label>
+            <input id="faces">
+        </div>
+
+        <div>
+            <label>Días</label>
+            <input id="dias">
+        </div>
+
+        <div class="full">
+            <label>Documentos</label>
+            <input id="documentos">
+        </div>
+
+    </div>
+
+    <button class="admin-btn" onclick="guardarVacante()">
+        Guardar vacante
+    </button>
+
+</div>
+
+<script type="module" src="JS/admin.js"></script>
+
+</body>
+</html>

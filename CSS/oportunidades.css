@@ -1,0 +1,342 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333333;
+    font-size: 14px;
+}
+
+.navbar {
+    background-color: #fff !important;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px 0;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.navbar-brand img {
+    height: 36px;
+    width: auto;
+}
+
+.navbar-brand span,
+.navbar-brand {
+    font-size: 15px;
+    font-weight: 700;
+    color: #003087;
+    letter-spacing: 0.3px;
+}
+
+.navbar .nav-link {
+    color: #444;
+    font-size: 14px;
+    padding: 6px 12px;
+}
+
+.navbar .nav-link:hover {
+    color: #003087;
+}
+
+/* Ícono de usuario (perfil) */
+.navbar .nav-item.perfil-icon a {
+    font-size: 22px;
+    color: #555;
+    padding: 4px 8px;
+}
+
+/* ── BANNER SALUDO ── */
+#saludo,
+.banner-saludo {
+    background-color: #004C97;
+    color: #fff;
+    text-align: center;
+    padding: 14px 20px;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    margin-bottom: 0;
+}
+
+#saludo strong,
+.banner-saludo strong {
+    font-weight: 700;
+}
+
+/* ── CONTENIDO PRINCIPAL ── */
+main.container {
+    max-width: 1200px;
+    padding: 24px 16px 40px;
+    margin: 0 auto;
+}
+
+/* Título de sección */
+main h2,
+.seccion-titulo {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 18px;
+}
+
+/* ── CARDS DE VACANTE ── */
+#contenedor-vacantes .col-12 {
+     width: 100%;
+}
+
+.card-vacante,
+#contenedor-vacantes .card {
+    background: #fff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    overflow: hidden;
+    margin-bottom: 18px;
+    padding: 0 !important;
+}
+
+/* Imagen lateral izquierda */
+.card-vacante .card-img,
+#contenedor-vacantes .card img,
+.card-vacante img {
+    width: 140px;
+    min-width: 140px;
+    max-width: 140px;
+    height: auto;
+    min-height: 100%;
+    object-fit: cover;
+    object-position: center;
+    align-self: stretch;   /* ← esto hace que estire hasta el alto total de la card */
+    border-radius: 0;
+    flex-shrink: 0;
+}
+
+/* Cuerpo de la card */
+.card-vacante .card-body,
+#contenedor-vacantes .card-body {
+    padding: 14px 14px 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+}
+
+/* Título de vacante */
+.card-vacante .card-title,
+#contenedor-vacantes .card-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 3px;
+    line-height: 1.3;
+}
+
+#contenedor-vacantes .col-12 {
+    width: 100%;
+}
+
+/* Tablet y desktop → 2 columnas */
+@media (min-width: 768px) {
+    #contenedor-vacantes .col-12 {
+        width: 50%;
+        padding: 10px; /* espacio entre cards */
+    }
+}
+
+/* Asegura que la card ocupe todo su espacio */
+.card-vacante,
+#contenedor-vacantes .card {
+    width: 100%;
+}
+/* Área y descripción */
+.card-vacante .card-area,
+#contenedor-vacantes .text-muted {
+    font-size: 12px;
+    color: #555;
+    margin-bottom: 4px;
+}
+
+.card-vacante .card-text,
+#contenedor-vacantes .card-text {
+    font-size: 12px;
+    color: #444;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    flex-grow: 1;
+}
+
+/* Barra de match / progreso */
+.barra-match-wrapper {
+    margin-bottom: 10px;
+}
+
+.barra-match {
+    height: 5px;
+    background: #e0e0e0;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.barra-match-fill {
+    height: 100%;
+    background: #003087;
+    border-radius: 3px;
+    transition: width 0.4s ease;
+}
+
+/* Badge de porcentaje (versión texto) */
+.badge-match,
+#contenedor-vacantes .badge {
+    display: none; /* en la imagen no aparece badge, se usa barra */
+}
+
+/* Botón Ver Ruta */
+.btn-ver-ruta,
+#contenedor-vacantes .btn {
+    display: inline-block;
+    background-color: #1cb7f0;
+    color: #fff !important;
+    border: none;
+    border-radius: 6px;
+    padding: 7px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background 0.2s;
+}
+
+.btn-ver-ruta:hover,
+#contenedor-vacantes .btn:hover {
+    background-color: #1490bc;
+    color: #fff;
+}
+
+/* ── FOOTER ── */
+footer,
+.footer-diners {
+    background-color: #002060;
+    color: #ccc;
+    padding: 28px 0 16px;
+    font-size: 12px;
+}
+
+.footer-diners .footer-logo img {
+    height: 30px;
+    margin-bottom: 6px;
+    filter: brightness(0) invert(1);
+}
+
+.footer-diners h6,
+.footer-diners .footer-col-title {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.footer-diners ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-diners ul li {
+    margin-bottom: 5px;
+}
+
+.footer-diners ul li a,
+.footer-diners a {
+    color: #bbb;
+    text-decoration: none;
+    font-size: 12px;
+    transition: color 0.2s;
+}
+
+.footer-diners ul li a:hover,
+.footer-diners a:hover {
+    color: #fff;
+}
+
+/* Iconos redes sociales */
+.footer-redes a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #fff2;
+    color: #fff;
+    font-size: 13px;
+    margin-right: 6px;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.footer-redes a:hover {
+    background: #fff4;
+    color: #fff;
+}
+
+/* Línea inferior del footer */
+.footer-bottom {
+    border-top: 1px solid #ffffff22;
+    margin-top: 20px;
+    padding-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    color: #999;
+    font-size: 11px;
+}
+
+.footer-bottom a {
+    color: #aaa;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    color: #fff;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 480px) {
+    .card-vacante,
+    #contenedor-vacantes .card {
+        flex-direction: column;
+    }
+
+    .card-vacante .card-img,
+    #contenedor-vacantes .card img,
+    .card-vacante img {
+        width: 100%;
+        max-width: 100%;
+        height: 160px;
+        min-height: unset;
+    }
+
+    main.container {
+    max-width: 1500px;
+    padding: 24px 16px 40px;
+    margin: 0 auto;
+}
+
+
+}

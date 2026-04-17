@@ -1,56 +1,101 @@
+@font-face {
+  font-family: 'Gotham';
+  src: url('../Fuentes/Gotham-Light.otf') format('opentype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('../Fuentes/Gotham-Book.otf') format('opentype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('../Fuentes/Gotham-Medium.otf') format('opentype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('../Fuentes/Gotham-Bold.otf') format('opentype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('../Fuentes/Gotham-Black.otf') format('opentype');
+  font-weight: 900;
+}
+
 .navbar-brand img {
   height: 40px;
   padding: 0;
 }
 
-.frase{
-  background-color: #072756;
+/* Frase superior */
+.frase {
+  background-color: #004C97;
   color: white;
   text-align: center;
   padding: 30px 20px;
+  font-family: var(--font-title);
+  font-weight: 700; /* Bold */
 }
 
+/* Títulos principales */
 h1 {
+  font-family: var(--font-title);
   font-size: 1.8rem;
-  font-weight: 700;
+  font-weight: 900; /* Black */
   margin: 0;
 }
 
 .perfil-section {
   min-height: 80vh;
   display: flex;
-  align-items: stretch;
+  align-items: stretch; /* IMPORTANTE */
 }
 
+/* COLUMNA IZQUIERDA (IMAGEN) */
 .perfil-imagen {
   background-size: cover;
-    background-position: center;
-    height: 100%;
-    min-height: 500px;
+  background-position: center;
+  height: auto;
+  min-height: 100%;
+  flex: 1; /* ocupa todo el espacio disponible */
 }
 
+/* Formulario */
 .perfil-formulario {
   background-color: #f4f4f4;
   padding: 40px 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-family: var(--font-body);
+  font-weight: 400; /* Book */
 }
 
 .perfil-formulario h2 {
+  font-family: var(--font-title);
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 700; /* Bold */
   color: #072756;
   margin-bottom: 24px;
 }
 
 .perfil-formulario label {
+  font-family: var(--font-body);
   font-size: 0.9rem;
+  font-weight: 500; /* Medium */
   color: #555;
   margin-bottom: 4px;
 }
 
 .perfil-formulario .form-control {
+  font-family: var(--font-body);
+  font-weight: 400; /* Book */
   border: none;
   border-radius: 4px;
   padding: 10px 14px;
@@ -58,14 +103,16 @@ h1 {
   background: white;
 }
 
+/* Botón */
 .btn-siguiente {
   background-color: #00A3E0;
   color: white;
   border: none;
   border-radius: 50px;
   padding: 12px 40px;
+  font-family: var(--font-body);
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 700; /* Bold */
   width: 100%;
   margin-top: 10px;
   cursor: pointer;
@@ -76,6 +123,7 @@ h1 {
   background-color: #00A3E0;
 }
 
+/* Responsive */
 @media (max-width: 768px) {
   .perfil-imagen {
     min-height: 250px;
@@ -90,32 +138,39 @@ h1 {
   }
 }
 
+/* Tags */
 .tag {
-    padding: 6px 14px;
-    border-radius: 50px;
-    border: 1px solid #072756;
-    color: #072756;
-    cursor: pointer;
-    font-size: 0.85rem;
-    transition: all 0.2s;
-    background: white;
+  padding: 6px 14px;
+  border-radius: 50px;
+  border: 1px solid #072756;
+  color: #072756;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500; /* Medium */
+  transition: all 0.2s;
+  background: white;
 }
+
+/* Habilidades */
 .habi {
-    padding: 10px 8px;
-    border-radius: 12px;
-    border: 1.5px solid #d0d0d0;
-    color: #072756;
-    cursor: pointer;
-    font-size: 0.82rem;
-    text-align: center;
-    background: white;
-    transition: all 0.2s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 44px;
+  padding: 10px 8px;
+  border-radius: 12px;
+  border: 1.5px solid #d0d0d0;
+  color: #072756;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 500; /* Medium */
+  text-align: center;
+  background: white;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
 }
 
 .habi:hover {
-    border-color: #072756;
+  border-color: #072756;
 }

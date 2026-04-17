@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorador de Vacantes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/oportunidades.css">
+    <link rel="stylesheet" href="CSS/explorar.css">
+    <link rel="stylesheet" href="CSS/fonts.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand" href="index.html">
+                <img src="Imagenes/diners.png" alt="Diners Club">
+            </a>
+            <button  class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="vacantes.html">Explorador</a></li>
+                    <li class="nav-item"><a class="nav-link" href="resgistro.html">Registro</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- BANNER -->
+    <div class="banner-vacantes">
+        <h1>Explora todas nuestras oportunidades</h1>
+        <p>Encuentra el puesto ideal para ti en Diners Club Perú</p>
+    </div>
+
+    <!-- FILTROS POR ÁREA -->
+    <div class="filtros-wrapper">
+        <button class="filtro-btn active" data-area="todas">Todas</button>
+        <button class="filtro-btn" data-area="Tecnología">Tecnología</button>
+        <button class="filtro-btn" data-area="Comercial">Comercial</button>
+        <button class="filtro-btn" data-area="Marketing">Marketing</button>
+        <button class="filtro-btn" data-area="Finanzas">Finanzas</button>
+        <button class="filtro-btn" data-area="Servicio al Cliente">Servicio al Cliente</button>
+    </div>
+
+    <!-- CONTENIDO -->
+    <main class="container-vacantes">
+        <div id="contenedor-areas"></div>
+    </main>
+
+    <script src="JS/explorar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

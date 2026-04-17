@@ -12,9 +12,9 @@ function matchVacante(usruario, vacante){
     return Math.round((matchean.length/habilidadesVacantes.length)*100);
 };
 
-function mejorMatch(vacantes, perfil){
+function mejorMatch(vacantes, perfil) {
     return vacantes
-    .map(v => ({...v, matchean: matchVacante(perfil, v)}))
-    .sort((a,b)=>b.matchean - a.matchean);
+        .map(v => ({ ...v, match: matchVacante(perfil, v) }))
+        .sort((a, b) => b.match - a.match);
 }
 

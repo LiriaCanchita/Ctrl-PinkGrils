@@ -1,18 +1,255 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalles de Vacantes</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ruta</title>
+  <meta
+    name="description"
+    content="Vacante de Analista de Sistema en Diners Club. Conoce más sobre el puesto, requisitos, documentos y postulación."
+  />
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="CSS/styles.css">
+  <link rel="stylesheet" href="CSS/rutaVacantes.css" />
+    <link rel="stylesheet" href="CSS/styles.css" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@300;400;500;700;900&display=swap"
+    rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/fonts.css">
 
 </head>
 <body>
-    
 
+ <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand" href="index.html">
+        <img src="Imagenes/diners.png" alt="Diners Club">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="explorar.html">Explorador</a></li>
+          <li class="nav-item"><a class="nav-link" href="resgistro.html">Registro</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <main>
+
+    <!-- SECCIÓN PRINCIPAL DE LA VACANTE -->
+    <section class="job-detail" id="vacante">
+      <div class="container">
+
+        <!-- HERO -->
+        <article class="job-hero">
+          <div class="job-hero__image">
+            <img src="img/analista-sistema-banner.jpg" alt="Banner de la vacante Analista de Sistema" />
+          </div>
+
+          <div class="job-hero__content">
+            <h1 class="job-hero__title">Analista de Sistema</h1>
+            <p class="job-hero__subtitle">Tecnología · 1 año de experiencia</p>
+
+            <button
+              type="button"
+              class="btn btn--primary job-hero__toggle"
+              id="toggleInfoBtn"
+              aria-expanded="false"
+              aria-controls="jobExtraInfo"
+            >
+              Ver más
+            </button>
+          </div>
+        </article>
+
+        <!-- INFORMACIÓN DESPLEGABLE -->
+        <section
+          class="job-extra-info"
+          id="jobExtraInfo"
+          hidden
+          aria-label="Información adicional del puesto"
+        >
+          <div class="job-extra-info__box">
+            <h2 class="job-extra-info__title">Más sobre este puesto</h2>
+
+            <p class="job-extra-info__text">
+              Serás parte del equipo que mantiene y mejora los sistemas que hacen
+              funcionar a la empresa. Tu día a día incluirá analizar procesos internos
+              para identificar oportunidades de mejora, desarrollar soluciones
+              tecnológicas junto a tu equipo y brindar soporte a las plataformas de la organización.
+            </p>
+
+            <p class="job-extra-info__text">
+              También participarás en la revisión de requerimientos, documentación de
+              procesos, coordinación con distintas áreas y propuestas de mejora que
+              ayuden a optimizar el trabajo interno. Buscamos una persona analítica,
+              responsable y con ganas de aprender y crecer profesionalmente.
+            </p>
+
+            <div class="job-extra-info__actions">
+              <a href="#requisitos" class="btn btn--secondary">Ver requisitos</a>
+              <a href="#postular" class="btn btn--primary">Postular ahora</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- REQUISITOS -->
+        <section class="job-requirements" id="requisitos">
+          <h2 class="section-title">¿Qué necesitas?</h2>
+
+          <div class="requirements-carousel" aria-label="Carrusel de requisitos y documentos">
+            <button
+              class="requirements-carousel__btn requirements-carousel__btn--prev"
+              type="button"
+              aria-label="Ver tarjeta anterior"
+            >
+              &#10094;
+            </button>
+
+            <div class="requirements-carousel__viewport">
+              <div class="requirements-carousel__track">
+
+                <!-- SLIDE 1 -->
+                <article class="requirements-slide active">
+                  <div class="requirements-card">
+                    <div class="requirements-card__image">
+                      <img src="Imagenes/Obligatorio.jpg" alt="Imagen de requisitos obligatorios" />
+                    </div>
+
+                    <div class="requirements-card__content">
+                      <h3>Obligatorio:</h3>
+                      <ul>
+                        <li>Estudios en Ingeniería de Sistemas, Computación o carrera afín</li>
+                        <li>Mínimo 1 año de experiencia en roles similares</li>
+                        <li>Conocimientos en JavaScript y SQL</li>
+                        <li>Manejo de Excel a nivel intermedio</li>
+                      </ul>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- SLIDE 2 -->
+                <article class="requirements-slide">
+                  <div class="requirements-card">
+                    <div class="requirements-card__image">
+                      <img src="Imagenes/Deseable.jpg" alt="Imagen de requisitos deseables" />
+                    </div>
+
+                    <div class="requirements-card__content">
+                      <h3>Deseable:</h3>
+                      <ul>
+                        <li>Experiencia en metodologías ágiles</li>
+                        <li>Conocimientos en bases de datos</li>
+                        <li>Inglés básico o intermedio</li>
+                        <li>Capacidad de análisis y trabajo en equipo</li>
+                      </ul>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- SLIDE 3 -->
+                <article class="requirements-slide">
+                  <div class="requirements-card">
+                    <div class="requirements-card__image">
+                      <img src="Imagenes/Documentos.jpg" alt="Imagen de documentos necesarios para postular" />
+                    </div>
+
+                    <div class="requirements-card__content">
+                      <h3>Documentos que necesitas:</h3>
+                      <ul>
+                        <li>CV actualizado en formato PDF</li>
+                        <li>Copia de DNI</li>
+                        <li>Certificados de estudios o constancia de egresado</li>
+                        <li>Certificados de cursos o capacitaciones relevantes</li>
+                      </ul>
+                    </div>
+                  </div>
+                </article>
+
+              </div>
+            </div>
+
+            <button
+              class="requirements-carousel__btn requirements-carousel__btn--next"
+              type="button"
+              aria-label="Ver siguiente tarjeta"
+            >
+              &#10095;
+            </button>
+
+            <div class="requirements-carousel__dots" aria-label="Indicadores del carrusel">
+              <button class="requirements-carousel__dot active" type="button" aria-label="Ir a la tarjeta 1"></button>
+              <button class="requirements-carousel__dot" type="button" aria-label="Ir a la tarjeta 2"></button>
+              <button class="requirements-carousel__dot" type="button" aria-label="Ir a la tarjeta 3"></button>
+            </div>
+          </div>
+
+          <div class="job-requirements__cta" id="postular">
+            <a href="resgistro.html" class="btn btn--primary">Regístrate →</a>
+          </div>
+
+          <p class="job-requirements__text">Comienza tu camino en Diners</p>
+        </section>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+<footer class="footer">
+    <div class="container footer__container">
+
+      <div class="footer__brand">
+        <img src="Imagenes/diners2.png" alt="Logo Diners Club en blanco" class="footer__logo" />
+      </div>
+
+      <div class="footer__columns">
+        <div class="footer__column">
+          <h3>Nosotros</h3>
+          <ul>
+            <li><a href="#">Quiénes somos</a></li>
+            <li><a href="#">Nuestra cultura</a></li>
+            <li><a href="#">Trabaja con nosotros</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__column">
+          <h3>Lugares</h3>
+          <ul>
+            <li><a href="#">Lima</a></li>
+            <li><a href="#">Arequipa</a></li>
+            <li><a href="#">Modalidad remota</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__column">
+          <h3>Canales digitales</h3>
+          <ul>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p>Copyright © 2026 Diners Club Perú. Todos los derechos reservados.</p>
+      </div>
+
+    </div>
+  </footer>
+
+ <script src="JS/matching.js"></script>
+<script src="JS/rutaVacantes.js"></script>
+
 </body>
 </html>

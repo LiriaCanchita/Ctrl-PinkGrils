@@ -1,19 +1,47 @@
-/* =========================
-   VARIABLES GENERALES
-========================= */
+@font-face {
+  font-family: 'Gotham';
+  src: url('../Fuentes/Gotham-Light.otf') format('opentype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('../Fuentes/Gotham-Book.otf') format('opentype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('../Fuentes/Gotham-Medium.otf') format('opentype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('../Fuentes/Gotham-Bold.otf') format('opentype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('../Fuentes/Gotham-Black.otf') format('opentype');
+  font-weight: 900;
+}
+
+
 :root {
   --color-primary: #0d5cab;
   --color-primary-strong: #004b93;
   --color-accent: #18a9e6;
-  --color-dark: #1f1f1f;
-  --color-text: #222222;
+  --color-dark: #333333;
+  --color-text: #333333;
   --color-light: #f2f2f2;
   --color-white: #ffffff;
   --color-footer: #022b5b;
   --color-shadow: rgba(0, 0, 0, 0.18);
 
-  --font-title: 'Anton', sans-serif;
-  --font-body: 'Roboto', sans-serif;
+  --font-title: 'Gotham', sans-serif;
+  --font-body: 'Gotham', sans-serif;
 
   --container-width: 1200px;
   --radius-xl: 34px;
@@ -24,9 +52,6 @@
   --transition: 0.3s ease;
 }
 
-/* =========================
-   RESET
-========================= */
 * {
   margin: 0;
   padding: 0;
@@ -37,6 +62,7 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: var(--font-body);
+  font-weight: 400; /* Book */
   background: var(--color-white);
   color: var(--color-text);
   line-height: 1.4;
@@ -47,18 +73,12 @@ a { text-decoration: none; color: inherit; }
 button, input, textarea { font: inherit; }
 button { border: none; background: none; cursor: pointer; }
 
-/* =========================
-   CONTENEDOR
-========================= */
 .container {
   width: min(100% - 32px, var(--container-width));
   margin: 0 auto;
 
 }
 
-/* =========================
-   HERO
-========================= */
 .hero {
   background: var(--color-white);
   padding: 40px 0 0;
@@ -73,7 +93,7 @@ button { border: none; background: none; cursor: pointer; }
   font-family: var(--font-title);
   font-size: clamp(2.4rem, 5vw, 4.5rem);
   line-height: 1.05;
-  color: #000000;
+  color: #333333;
   max-width: 860px;
   margin: 0 auto;
 }
@@ -113,7 +133,7 @@ button { border: none; background: none; cursor: pointer; }
 
 .carousel__image img {
   width: 100%;
-  height: 100%;
+  height: 500px;
   object-fit: cover;
 }
 
@@ -129,7 +149,7 @@ button { border: none; background: none; cursor: pointer; }
   font-family: var(--font-title);
   font-size: clamp(2rem, 3.5vw, 3.8rem);
   line-height: 1.12;
-  color: #000000;
+  color: #333333;
   max-width: 500px;
 }
 
@@ -160,7 +180,8 @@ button { border: none; background: none; cursor: pointer; }
 ========================= */
 .section-title {
   font-family: var(--font-title);
-  color: #000000;
+  font-weight: 700;
+  color: #333333;
   text-align: center;
   font-size: clamp(2.2rem, 4vw, 3.8rem);
   line-height: 1.05;
@@ -171,7 +192,7 @@ button { border: none; background: none; cursor: pointer; }
   text-align: center;
   font-size: clamp(1.2rem, 2vw, 1.8rem);
   color: var(--color-primary);
-  font-weight: 700;
+  font-weight: 500; 
   margin-bottom: 34px;
 }
 
@@ -210,6 +231,7 @@ button { border: none; background: none; cursor: pointer; }
 }
 
 .step-card__text {
+  font-weight: 500; 
   color: var(--color-primary);
   font-size: 1.6rem;
   line-height: 1.2;
@@ -331,7 +353,7 @@ button { border: none; background: none; cursor: pointer; }
 
 .final-cta__title {
   font-family: var(--font-title);
-  color: #000000;
+  color: #333333;
   font-size: clamp(2.4rem, 4.5vw, 4rem);
   line-height: 1.06;
   max-width: 700px;
@@ -465,7 +487,8 @@ button { border: none; background: none; cursor: pointer; }
   }
 
   .carousel__text h2 {
-    font-size: clamp(1.8rem, 7vw, 2.8rem);
+    font-family: var(--font-title);
+  font-weight: 700;
   }
 
   .steps__grid {
@@ -500,4 +523,79 @@ button { border: none; background: none; cursor: pointer; }
 
   .benefit-card__overlay h3 { font-size: 1.3rem; }
   .benefit-card__overlay p { font-size: 1rem; }
+}
+
+/* =========================
+   APLICACIÓN DE TIPOGRAFÍA
+========================= */
+
+/* Texto base */
+body {
+  font-family: var(--font-body);
+  font-weight: 400; /* Book */
+}
+
+/* Navbar */
+.navbar .nav-link {
+  font-weight: 500; /* Medium */
+}
+
+/* Hero */
+.hero__title {
+  font-family: var(--font-title);
+  font-weight: 900; /* Black */
+}
+
+/* Carrusel */
+.carousel__text h2 {
+  font-family: var(--font-title);
+  font-weight: 700; /* Bold */
+}
+
+/* Secciones */
+.section-title {
+  font-family: var(--font-title);
+  font-weight: 700; /* Bold */
+}
+
+.section-subtitle {
+  font-weight: 500; /* Medium */
+}
+
+/* Steps */
+.step-card__text {
+  font-weight: 500; /* Medium */
+}
+
+/* Beneficios */
+.benefit-card__overlay h3 {
+  font-weight: 700; /* Bold */
+}
+
+.benefit-card__overlay p {
+  font-weight: 300; /* Light */
+}
+
+/* Botones */
+.btn {
+  font-weight: 700; /* Bold */
+}
+
+/* CTA final */
+.final-cta__title {
+  font-family: var(--font-title);
+  font-weight: 900; /* Black */
+}
+
+.final-cta__text {
+  font-weight: 500; /* Medium */
+}
+
+/* Footer */
+.footer__column h3 {
+  font-weight: 700; /* Bold */
+}
+
+.footer__column a {
+  font-weight: 400; /* Book */
 }

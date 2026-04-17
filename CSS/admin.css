@@ -1,0 +1,107 @@
+/* CONTENEDOR */
+.admin-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 32px 28px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+/* TÍTULO */
+.admin-container h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #003087;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+/* GRID FORM */
+.admin-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 20px;
+}
+
+/* FULL WIDTH */
+.admin-form .full {
+    grid-column: 1 / -1;
+}
+
+/* INPUTS */
+.admin-form input,
+.admin-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #dcdcdc;
+    font-size: 13px;
+    transition: all 0.2s;
+    background: #fafafa;
+}
+
+.admin-form textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+/* FOCUS */
+.admin-form input:focus,
+.admin-form textarea:focus {
+    outline: none;
+    border-color: #003087;
+    background: #fff;
+    box-shadow: 0 0 0 2px rgba(0,48,135,0.1);
+}
+
+/* LABELS */
+.admin-form label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 4px;
+    display: block;
+}
+
+/* BOTÓN */
+.admin-btn {
+    margin-top: 20px;
+    width: 100%;
+    background: #003087;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.admin-btn:hover {
+    background: #001d5c;
+}
+
+/* SECCIONES */
+.admin-section {
+    margin-bottom: 18px;
+}
+
+/* INPUT TIPO TAG INFO */
+.admin-hint {
+    font-size: 11px;
+    color: #777;
+    margin-top: 4px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .admin-container {
+        margin: 20px 12px;
+        padding: 22px 16px;
+    }
+
+    .admin-form {
+        grid-template-columns: 1fr;
+    }
+}

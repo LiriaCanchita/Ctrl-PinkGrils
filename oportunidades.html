@@ -1,57 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vacantes</title>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="CSS/styles.css">
-
+    <title>Oportunidades</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/oportunidades.css">
+    <link rel="stylesheet" href="CSS/fonts.css">
+    
 </head>
 
 <body>
-    <!--?ESTE NAVBAR SERA POR MIENTRAS, LO PUEDEN CAMBIAR, PERO ASEGURENSE QUE TENGA TODOS LOS LINKS-->
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">Diners</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="perfil.html">Perfil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="vacantes.html">Vacantes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="resgistro.html">Resgistrarse</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+      <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand" href="index.html">
+        <img src="Imagenes/diners.png" alt="Diners Club">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="explorar.html">Explorador</a></li>
+          <li class="nav-item"><a class="nav-link" href="resgistro.html">Registro</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+-
+    <!-- BANNER SALUDO -->
+    <div id="saludo"></div>
 
-
-    <!--?ESTE SERA EL CONTENEDOR DONDE ESTARAN LAS VACANTES, SI LO CAMBIAN MANTENGAN LOS ID-->
-    <main class="container my-5">
-        <div id="saludo" class="mb-4"></div>
-        <h2 class="mb-4">Oportunidades</h2>
-
-        <div id="contenedor-vacantes" class="row g-4"></div>
+    <!-- CONTENIDO -->
+    <main class="container my-4">
+        <h2 class="fw-bold mb-4">Oportunidades</h2>
+        <div id="contenedor-vacantes" class="row g-0"></div>
     </main>
 
     <script src="JS/matching.js"></script>
-    <script src="JS/vacanteOpotunidades.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
-</body>
+<script type="module" src="JS/vacanteOpotunidades.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
+</body>
 </html>
