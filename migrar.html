@@ -1,4 +1,28 @@
-[{
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><title>Migrar vacantes</title></head>
+<body>
+<h2 id="estado">Migrando vacantes a Firebase...</h2>
+<ul id="log"></ul>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+const firebaseConfig = {
+    apiKey: "AIzaSyDd3BvvhuMXG2GkSbnDK6n5U_1fahb9zoE",
+    authDomain: "dinersclub-d9204.firebaseapp.com",
+    projectId: "dinersclub-d9204",
+    storageBucket: "dinersclub-d9204.firebasestorage.app",
+    messagingSenderId: "779647853011",
+    appId: "1:779647853011:web:9815b4708b892a34218f26",
+    measurementId: "G-CV4P14YXB7"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+const vacantes = [{
     "id": 1,
     "titulo": "Analista de Tecnología",
     "area": "Tecnología",
@@ -11,7 +35,8 @@
     "requisitosDeseables": ["Experiencia en metodologías ágiles", "Conocimientos en bases de datos", "Inglés básico o intermedio"],
     "Faces": ["Entrevista RRHH", "Prueba técnica", "Entrevista final"],
     "Dias": ["3 dias", "7 dias", "1 dia"],
-    "Documentos": ["CV actualizado en PDF", "Copia de DNI", "Certificados de estudios", "Certificados de cursos relevantes"]
+    "Documentos": ["CV actualizado en PDF", "Copia de DNI", "Certificados de estudios", "Certificados de cursos relevantes"],
+    fecha: new Date().toISOString()
 }, {
     "id": 2,
     "titulo": "Ejecutivo de Ventas",
@@ -25,7 +50,8 @@
     "requisitosDeseables": ["Experiencia en sector financiero", "Cartera de clientes propia", "Inglés básico"],
     "Faces": ["Entrevista RRHH", "Dinámica grupal", "Entrevista final"],
     "Dias": ["3 dias", "4 dias", "1 dia"],
-    "Documentos": ["CV actualizado en PDF", "Copia de DNI", "Referencias laborales"]
+    "Documentos": ["CV actualizado en PDF", "Copia de DNI", "Referencias laborales"],
+    fecha: new Date().toISOString()
 }, {
     "id": 3,
     "titulo": "Analista de Marketing Digital",
@@ -39,7 +65,8 @@
     "requisitosDeseables": ["Conocimiento en Google Ads o Meta Ads", "Experiencia con herramientas de automatización", "Portafolio de campañas previas"],
     "Faces": ["Entrevista RRHH", "Presentación de portafolio", "Entrevista final"],
     "Dias": ["3 dias", "5 dias", "2 dias"],
-    "Documentos": ["CV actualizado en PDF", "Copia de DNI", "Portafolio digital"]
+    "Documentos": ["CV actualizado en PDF", "Copia de DNI", "Portafolio digital"],
+    fecha: new Date().toISOString()
 }, {
     "id": 4,
     "titulo": "Analista de Riesgos",
@@ -53,7 +80,8 @@
     "requisitosDeseables": ["Experiencia en sector financiero o bancario", "Conocimientos en Power BI", "Inglés intermedio"],
     "Faces": ["Entrevista RRHH", "Prueba técnica", "Entrevista final"],
     "Dias": ["3 dias", "7 dias", "1 dia"],
-    "Documentos": ["CV actualizado en PDF", "Copia de DNI", "Certificados de estudios"]
+    "Documentos": ["CV actualizado en PDF", "Copia de DNI", "Certificados de estudios"],
+    fecha: new Date().toISOString()
 }, {
     "id": 5,
     "titulo": "Especialista de Atención al Cliente",
@@ -67,5 +95,27 @@
     "requisitosDeseables": ["Experiencia en sector financiero", "Manejo de CRM", "Inglés básico"],
     "Faces": ["Entrevista RRHH", "Roleplay de atención", "Entrevista final"],
     "Dias": ["3 dias", "4 dias", "1 dia"],
-    "Documentos": ["CV actualizado en PDF", "Copia de DNI"]
-}]
+    "Documentos": ["CV actualizado en PDF", "Copia de DNI"],
+    fecha: new Date().toISOString()
+}];
+
+const log = document.getElementById('log');
+const estado = document.getElementById('estado');
+let ok = 0;
+
+for (const v of vacantes) {
+    try {
+        await addDoc(collection(db, "vacantes"), v);
+        log.innerHTML += `<li style="color:green">✓ ${v.titulo}</li>`;
+        ok++;
+    } catch (e) {
+        log.innerHTML += `<li style="color:red">✗ ${v.titulo} — ${e.message}</li>`;
+    }
+}
+
+estado.textContent = ok === vacantes.length
+    ? `✅ Listo — ${ok} vacantes subidas. Ya puedes borrar este archivo.`
+    : `⚠️ ${ok}/${vacantes.length} subidas. Revisa los errores.`;
+</script>
+</body>
+</html>

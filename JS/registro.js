@@ -154,10 +154,23 @@ function guardarPaso() {
     }
 
     const registro = {
-        // ... resto igual
+        nombre:      sessionStorage.getItem('nombre'),
+        email:       sessionStorage.getItem('email'),
+        telefono:    sessionStorage.getItem('telefono'),
+        dni:         sessionStorage.getItem('dni'),
+        fecha:       sessionStorage.getItem('fecha'),
+        cargo:       sessionStorage.getItem('cargo'),
+        experiencia: sessionStorage.getItem('experiencia'),
+        estudios:    sessionStorage.getItem('estudios'),
+        universidad: sessionStorage.getItem('universidad'),
+        empresa:     sessionStorage.getItem('empresa'),
+        linkedin:    document.getElementById('linkedin')?.value.trim() || '',
+        portafolio:  document.getElementById('portafolio')?.value.trim() || '',
+        fecha_registro: new Date().toISOString()
     };
 
     enviarAFirebase(registro);
+    return true;
 }
 
     return true;
@@ -185,7 +198,7 @@ async function enviarAFirebase(registro) {
                     Tus datos fueron guardados correctamente. 
                     Te contactaremos cuando surja una oportunidad que se ajuste a tu perfil.
                 </p>
-                <a href="oportunidades.html" 
+                <a href="explorar.html" 
                    style="background:#003087; color:#fff; border-radius:8px; padding:10px 24px; 
                           text-decoration:none; font-weight:600; font-size:14px;">
                     Ver oportunidades
@@ -215,7 +228,9 @@ function siguiente() {
 }
 
 boton.addEventListener("click", () => {
-    guardarPaso();
+    const ok = guardarPaso();
+    if (!ok) return; // ← DETIENE si hay error
+
     if (actual < paginas.length - 1) {
         actual++;
         siguiente();

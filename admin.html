@@ -2,87 +2,122 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel Admin</title>
     <link rel="stylesheet" href="CSS/admin.css">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/styles.css">
 </head>
 <body>
 
-<div class="admin-container">
+     <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand" href="index.html">
+        <img src="Imagenes/diners.png" alt="Diners Club">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="explorar.html">Explorador</a></li>
+          <li class="nav-item"><a class="nav-link" href="resgistro.html">Registro</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <h2>Crear nueva vacante</h2>
+    <div class="admin-banner">Panel de administración</div>
 
-    <div class="admin-form">
+    <div class="admin-container">
 
-        <div>
-            <label>Título</label>
-            <input id="titulo">
+        <h2>Crear nueva vacante</h2>
+        <p class="admin-subtitulo">Completa todos los campos para publicar una nueva oportunidad</p>
+
+        <div class="admin-form">
+
+            <div class="full admin-seccion-titulo">Información general</div>
+
+            <div>
+                <label>Título</label>
+                <input id="titulo" placeholder="Ej: Analista de Datos">
+            </div>
+
+            <div>
+                <label>Área</label>
+                <input id="area" placeholder="Ej: Tecnología">
+            </div>
+
+            <div>
+                <label>Experiencia requerida</label>
+                <input id="experiencia" placeholder="Ej: 2-4 años">
+            </div>
+
+<div>
+    <label>Imagen de la vacante</label>
+    <input type="file" id="imagenArchivo" accept="image/*">
+    <div class="admin-hint">JPG o PNG, máximo 800KB recomendado</div>
+    <div id="preview-imagen" style="display:none; margin-top:10px;">
+        <img id="img-preview" style="max-height:120px; border-radius:10px; object-fit:cover;">
+        <p id="img-peso" style="font-size:0.75rem; color:#777; margin-top:4px;"></p>
+    </div>
+</div>
+
+            <div class="full">
+                <label>Descripción corta</label>
+                <textarea id="descripcion" placeholder="Resumen breve de la vacante..."></textarea>
+            </div>
+
+            <div class="full">
+                <label>Descripción larga</label>
+                <textarea id="descripcionLarga" placeholder="Detalle completo del rol, responsabilidades..."></textarea>
+            </div>
+
+            <div class="full admin-seccion-titulo">Perfil del candidato</div>
+
+            <div class="full">
+                <label>Habilidades</label>
+                <input id="habilidades" placeholder="SQL, Python, Excel...">
+                <div class="admin-hint">Separar con comas</div>
+            </div>
+
+            <div class="full">
+                <label>Requisitos obligatorios</label>
+                <input id="reqObli" placeholder="Ej: Título universitario, inglés avanzado...">
+                <div class="admin-hint">Separar con comas</div>
+            </div>
+
+            <div class="full">
+                <label>Requisitos deseables</label>
+                <input id="reqDese" placeholder="Ej: Certificación en AWS, experiencia en fintech...">
+                <div class="admin-hint">Separar con comas</div>
+            </div>
+
+            <div class="full admin-seccion-titulo">Proceso de selección</div>
+
+            <div class="full">
+                <label>Documentos requeridos</label>
+                <input id="documentos" placeholder="CV actualizado, carta de motivación...">
+                <div class="admin-hint">Separar con comas</div>
+            </div>
+
         </div>
 
-        <div>
-            <label>Área</label>
-            <input id="area">
-        </div>
-
-        <div>
-            <label>Experiencia</label>
-            <input id="experiencia">
-        </div>
-
-        <div>
-            <label>Imagen</label>
-            <input id="imagen">
-        </div>
-
-        <div class="full">
-            <label>Descripción corta</label>
-            <textarea id="descripcion"></textarea>
-        </div>
-
-        <div class="full">
-            <label>Descripción larga</label>
-            <textarea id="descripcionLarga"></textarea>
-        </div>
-
-        <div class="full">
-            <label>Habilidades</label>
-            <input id="habilidades">
-            <div class="admin-hint">Separar con comas</div>
-        </div>
-
-        <div class="full">
-            <label>Requisitos obligatorios</label>
-            <input id="reqObli">
-        </div>
-
-        <div class="full">
-            <label>Requisitos deseables</label>
-            <input id="reqDese">
-        </div>
-
-        <div>
-            <label>Fases</label>
-            <input id="faces">
-        </div>
-
-        <div>
-            <label>Días</label>
-            <input id="dias">
-        </div>
-
-        <div class="full">
-            <label>Documentos</label>
-            <input id="documentos">
-        </div>
+        <button class="admin-btn" id="admin-btn" onclick="guardarVacante()">
+    Guardar vacante
+</button>
 
     </div>
 
-    <button class="admin-btn" onclick="guardarVacante()">
-        Guardar vacante
-    </button>
+    <footer class="admin-footer">
+        © 2025 Diners Club Perú — Todos los derechos reservados
+    </footer>
 
-</div>
-
-<script type="module" src="JS/admin.js"></script>
-
+    <script type="module" src="JS/admin.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
 </body>
 </html>
