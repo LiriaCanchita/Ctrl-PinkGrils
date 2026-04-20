@@ -58,8 +58,6 @@ window.guardarVacante = async function () {
     const habilidades          = document.getElementById("habilidades").value.split(",").map(x => x.trim()).filter(Boolean);
     const requisitosObligatorios = document.getElementById("reqObli").value.split(",").map(x => x.trim()).filter(Boolean);
     const requisitosDeseables  = document.getElementById("reqDese").value.split(",").map(x => x.trim()).filter(Boolean);
-    const Faces      = document.getElementById("faces").value.split(",").map(x => x.trim()).filter(Boolean);
-    const Dias       = document.getElementById("dias").value.split(",").map(x => x.trim()).filter(Boolean);
     const Documentos = document.getElementById("documentos").value.split(",").map(x => x.trim()).filter(Boolean);
 
     if (!titulo || !area || !experiencia || !descripcion || !descripcionLarga || !archivoImagen) {
@@ -82,8 +80,7 @@ window.guardarVacante = async function () {
         await addDoc(collection(db, "vacantes"), {
             titulo, area, experiencia, descripcion, descripcionLarga,
             imagen: imagenBase64,
-            habilidades, requisitosObligatorios, requisitosDeseables,
-            Faces, Dias, Documentos,
+            habilidades, requisitosObligatorios, requisitosDeseables, Documentos,
             fecha: new Date().toISOString()
         });
 
