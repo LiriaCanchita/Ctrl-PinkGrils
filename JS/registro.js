@@ -229,7 +229,7 @@ function siguiente() {
 
 boton.addEventListener("click", () => {
     const ok = guardarPaso();
-    if (!ok) return; // ← DETIENE si hay error
+    if (!ok) return; 
 
     if (actual < paginas.length - 1) {
         actual++;

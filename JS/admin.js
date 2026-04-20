@@ -41,7 +41,7 @@ document.getElementById('imagenArchivo').addEventListener('change', (e) => {
 function imagenABase64(file) {
     return new Promise((resolve, reject) => {
         const reader = new FileReader();
-        reader.onload = (e) => resolve(e.target.result); // ya incluye "data:image/jpeg;base64,..."
+        reader.onload = (e) => resolve(e.target.result); 
         reader.onerror = reject;
         reader.readAsDataURL(file);
     });
@@ -84,7 +84,7 @@ window.guardarVacante = async function () {
             fecha: new Date().toISOString()
         });
 
-        alert("✅ Vacante creada correctamente");
+        alert(" Vacante creada correctamente");
         document.querySelectorAll('.admin-form input, .admin-form textarea').forEach(el => el.value = '');
         document.getElementById('preview-imagen').style.display = 'none';
 

@@ -16,7 +16,7 @@ body {
   margin: auto;
 }
 
-/* HERO */
+
 .hero {
   position: relative;
   background: url("../img/banner.jpg") center/cover no-repeat;
@@ -45,7 +45,7 @@ body {
   margin: 20px auto;
 }
 
-/* BOTONES */
+
 .btn {
   padding: 12px 28px;
   border-radius: 30px;
@@ -69,7 +69,7 @@ body {
   transform: translateY(-3px);
 }
 
-/* MISIÓN */
+
 .mision {
   margin-top: -60px;
 }
@@ -81,7 +81,7 @@ body {
   box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
 
-/* OBJETIVOS */
+
 .objetivos {
   background: var(--light);
   padding: 80px 0;
@@ -118,7 +118,7 @@ body {
   padding: 25px;
 }
 
-/* CTA */
+
 .cta {
   background: linear-gradient(135deg, #003087, #0d5cab);
   color: white;
@@ -126,7 +126,7 @@ body {
   padding: 100px 0;
 }
 
-/* ANIMACIONES */
+
 .reveal {
   opacity: 0;
   transform: translateY(40px);

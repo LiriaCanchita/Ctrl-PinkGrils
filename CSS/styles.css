@@ -33,37 +33,37 @@
   padding: 0;
 }
 
-/* Frase superior */
+
 .frase {
   background-color: #004C97;
   color: white;
   text-align: center;
   padding: 30px 20px;
   font-family: var(--font-title);
-  font-weight: 700; /* Bold */
+  font-weight: 700; 
 }
 
-/* Títulos principales */
+
 h1 {
   font-family: var(--font-title);
   font-size: 1.8rem;
-  font-weight: 900; /* Black */
+  font-weight: 900; 
   margin: 0;
 }
 
 .perfil-section {
   min-height: 80vh;
   display: flex;
-  align-items: stretch; /* IMPORTANTE */
+  align-items: stretch; 
 }
 
-/* COLUMNA IZQUIERDA (IMAGEN) */
+
 .perfil-imagen {
   background-size: cover;
   background-position: center;
   height: auto;
   min-height: 100%;
-  flex: 1; /* ocupa todo el espacio disponible */
+  flex: 1; 
 }
 
 /* Formulario */
@@ -74,13 +74,13 @@ h1 {
   flex-direction: column;
   justify-content: center;
   font-family: var(--font-body);
-  font-weight: 400; /* Book */
+  font-weight: 400; 
 }
 
 .perfil-formulario h2 {
   font-family: var(--font-title);
   font-size: 2rem;
-  font-weight: 700; /* Bold */
+  font-weight: 700; 
   color: #072756;
   margin-bottom: 24px;
 }
@@ -88,14 +88,14 @@ h1 {
 .perfil-formulario label {
   font-family: var(--font-body);
   font-size: 0.9rem;
-  font-weight: 500; /* Medium */
+  font-weight: 500; 
   color: #555;
   margin-bottom: 4px;
 }
 
 .perfil-formulario .form-control {
   font-family: var(--font-body);
-  font-weight: 400; /* Book */
+  font-weight: 400; 
   border: none;
   border-radius: 4px;
   padding: 10px 14px;
@@ -103,7 +103,6 @@ h1 {
   background: white;
 }
 
-/* Botón */
 .btn-siguiente {
   background-color: #00A3E0;
   color: white;
@@ -123,7 +122,7 @@ h1 {
   background-color: #00A3E0;
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
   .perfil-imagen {
     min-height: 250px;
@@ -138,7 +137,6 @@ h1 {
   }
 }
 
-/* Tags */
 .tag {
   padding: 6px 14px;
   border-radius: 50px;
@@ -152,7 +150,6 @@ h1 {
   background: white;
 }
 
-/* Habilidades */
 .habi {
   padding: 10px 8px;
   border-radius: 12px;
@@ -175,7 +172,7 @@ h1 {
   border-color: #072756;
 }
 
-/* Secciones colapsables de habilidades */
+
 .habi-seccion {
   margin-bottom: 10px;
   border: 1.5px solid #d0d0d0;

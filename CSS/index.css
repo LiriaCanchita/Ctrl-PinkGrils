@@ -350,9 +350,7 @@ button {
   box-shadow: 0 14px 24px rgba(0, 85, 160, 0.25);
 }
 
-/* =========================
-   BENEFICIOS
-========================= */
+
 .benefits {
   background: var(--color-white);
   padding: 52px 0 48px;

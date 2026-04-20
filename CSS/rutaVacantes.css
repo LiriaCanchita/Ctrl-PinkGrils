@@ -1,6 +1,4 @@
-/* =========================
-   VARIABLES
-========================= */
+
 :root {
   --color-bg-main: #efefef;
   --color-bg-soft: #f6f6f6;
@@ -26,10 +24,7 @@
   --transition-slow: 0.5s ease;
 }
 
-/* =========================
-   RESET
-========================= */
-/* Fix Bootstrap override */
+
 .btn {
   display: inline-flex !important;
   align-items: center !important;
@@ -52,9 +47,7 @@ a { color: inherit; text-decoration: none; }
 button, input, textarea, select { font: inherit; }
 button { border: none; background: none; cursor: pointer; }
 
-/* =========================
-   BASE
-========================= */
+
 .container {
   width: min(100% - 32px, var(--container-width));
   margin: 0 auto;
@@ -69,9 +62,7 @@ button { border: none; background: none; cursor: pointer; }
   letter-spacing: 0.2px;
 }
 
-/* =========================
-   BOTONES
-========================= */
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -114,17 +105,13 @@ button { border: none; background: none; cursor: pointer; }
   box-shadow: 0 12px 24px rgba(3, 37, 90, 0.12);
 }
 
-/* =========================
-   JOB DETAIL
-========================= */
+
 .job-detail {
   padding: 26px 0 0;
   background: var(--color-bg-main);
 }
 
-/* =========================
-   HERO VACANTE
-========================= */
+
 .job-hero {
   position: relative;
   border-radius: 0 0 var(--radius-lg) var(--radius-lg);
@@ -187,9 +174,7 @@ button { border: none; background: none; cursor: pointer; }
   margin-bottom: 20px;
 }
 
-/* =========================
-   INFO EXTRA
-========================= */
+
 .job-extra-info {
   padding-top: 18px;
   animation: fadeDown 0.45s ease;
@@ -245,15 +230,10 @@ button { border: none; background: none; cursor: pointer; }
   flex-wrap: wrap;
 }
 
-/* =========================
-   REQUISITOS
-========================= */
+
 .job-requirements { padding: 44px 0 52px; }
 .job-requirements .section-title { margin-bottom: 28px; }
 
-/* =========================
-   CARRUSEL
-========================= */
 .requirements-carousel {
   position: relative;
   max-width: 980px;
@@ -367,9 +347,7 @@ button { border: none; background: none; cursor: pointer; }
 .requirements-carousel__dot:hover { transform: scale(1.08); }
 .requirements-carousel__dot.active { background: var(--color-primary); transform: scale(1.2); }
 
-/* =========================
-   CTA
-========================= */
+
 .job-requirements__cta { display: flex; justify-content: center; margin-top: 22px; }
 
 .job-requirements__text {
@@ -381,9 +359,6 @@ button { border: none; background: none; cursor: pointer; }
   animation: fadeIn 1s ease both;
 }
 
-/* =========================
-   FOOTER
-========================= */
 .footer {
   background: var(--color-primary-footer);
   color: var(--color-white);
@@ -415,9 +390,7 @@ button { border: none; background: none; cursor: pointer; }
 .footer__bottom { padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.16); text-align: center; }
 .footer__bottom p { font-size: 0.82rem; color: rgba(255,255,255,0.76); }
 
-/* =========================
-   ANIMACIONES
-========================= */
+
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(28px); }
   to { opacity: 1; transform: translateY(0); }
@@ -431,9 +404,7 @@ button { border: none; background: none; cursor: pointer; }
   to { opacity: 1; }
 }
 
-/* =========================
-   TABLET
-========================= */
+
 @media (max-width: 1024px) {
   .job-hero__image { height: 340px; }
   .requirements-card { grid-template-columns: 290px 1fr; }
@@ -442,9 +413,7 @@ button { border: none; background: none; cursor: pointer; }
   .requirements-carousel__btn--next { right: -10px; }
 }
 
-/* =========================
-   MÓVIL
-========================= */
+
 @media (max-width: 768px) {
   .container { width: min(100% - 20px, var(--container-width)); }
   .job-detail { padding-top: 14px; }
@@ -467,9 +436,7 @@ button { border: none; background: none; cursor: pointer; }
   .footer__columns { grid-template-columns: 1fr 1fr; gap: 22px 16px; }
 }
 
-/* =========================
-   MÓVIL PEQUEÑO
-========================= */
+
 @media (max-width: 480px) {
   .container { width: min(100% - 14px, var(--container-width)); }
   .job-hero__image { height: 210px; }

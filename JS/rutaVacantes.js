@@ -29,35 +29,34 @@ async function cargarDetalle() {
         const v = { id: docSnap.id, ...docSnap.data() };
         console.log("Vacante cargada:", v);
 
-        // Título y subtítulo
+
         document.querySelector(".job-hero__title").textContent = v.titulo || '';
         document.querySelector(".job-hero__subtitle").textContent = `${v.area || ''} · ${v.experiencia || ''}`;
 
-        // Imagen hero
+
         const heroImg = document.querySelector(".job-hero__image img");
         if (heroImg && v.imagen) {
             heroImg.src = v.imagen;
             heroImg.alt = v.titulo || 'Imagen de la vacante';
         }
 
-        // Descripción larga
+
         const textos = document.querySelectorAll(".job-extra-info__text");
         if (textos[0]) textos[0].textContent = v.descripcionLarga || '';
         if (textos[1]) textos[1].textContent = '';
 
-        // Requisitos obligatorios
+
         const listaObli = document.querySelector(".requirements-slide:nth-child(1) .requirements-card__content ul");
         if (listaObli && v.requisitosObligatorios?.length) {
             listaObli.innerHTML = v.requisitosObligatorios.map(r => `<li>${r}</li>`).join('');
         }
 
-        // Requisitos deseables
         const listaDese = document.querySelector(".requirements-slide:nth-child(2) .requirements-card__content ul");
         if (listaDese && v.requisitosDeseables?.length) {
             listaDese.innerHTML = v.requisitosDeseables.map(r => `<li>${r}</li>`).join('');
         }
 
-        // Documentos
+
         const listaDocs = document.querySelector(".requirements-slide:nth-child(3) .requirements-card__content ul");
         if (listaDocs && v.Documentos?.length) {
             listaDocs.innerHTML = v.Documentos.map(d => `<li>${d}</li>`).join('');
@@ -70,7 +69,6 @@ async function cargarDetalle() {
 
 document.addEventListener("DOMContentLoaded", async () => {
 
-    // ← cargarDetalle va AQUÍ dentro, esperando a que el DOM esté listo
     await cargarDetalle();
 
     if ("scrollRestoration" in history) history.scrollRestoration = "manual";

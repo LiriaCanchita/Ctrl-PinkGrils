@@ -2,7 +2,7 @@ document.getElementById('form-perfil').addEventListener('submit', function (e) {
     e.preventDefault();
 
     const habilidades = Array.from(
-        document.querySelectorAll('input[name="habilidad"]:checked')  // ← comilla añadida
+        document.querySelectorAll('input[name="habilidad"]:checked')  
     ).map(cb => cb.value);
 
     const perfil = {

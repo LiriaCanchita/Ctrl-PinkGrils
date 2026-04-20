@@ -1,4 +1,4 @@
-/* BANNER */
+
 .banner-vacantes {
     background-color: #003087;
     color: #fff;
@@ -18,7 +18,7 @@
     margin: 0;
 }
 
-/* FILTROS */
+
 .filtros-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -47,14 +47,14 @@
     color: #fff;
 }
 
-/* CONTENEDOR PRINCIPAL */
+
 .container-vacantes {
     max-width: 700px;
     margin: 0 auto;
     padding: 28px 16px 48px;
 }
 
-/* TÍTULO DE ÁREA */
+
 .area-titulo {
     font-size: 17px;
     font-weight: 700;
@@ -76,7 +76,7 @@
     font-weight: 600;
 }
 
-/* CARDS — hereda estilo de oportunidades.css */
+
 .card-vacante {
     background: #fff;
     border: none;
@@ -163,7 +163,7 @@
     background-color: #001d5c;
 }
 
-/* Área oculta al filtrar */
+
 .area-grupo.oculto {
     display: none;
 }

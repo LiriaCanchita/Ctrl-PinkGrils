@@ -18,7 +18,7 @@ async function cargarYMostrar() {
     const snapshot = await getDocs(collection(db, "vacantes"));
     const vacantes = [];
     snapshot.forEach(doc => vacantes.push({ 
-    firestoreId: doc.id,  // ← ID real de Firestore
+    firestoreId: doc.id,  
     ...doc.data() 
 }));
 
